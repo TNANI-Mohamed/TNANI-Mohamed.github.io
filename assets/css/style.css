@@ -465,3 +465,19 @@ h3, .h3 {
 }
   
   }
+
+
+/* === Force all project cards into one row === */
+.projects .row {
+  display: flex;
+  flex-wrap: nowrap;       /* prevent wrapping */
+  justify-content: space-between; /* spread them evenly */
+  gap: 1rem;               /* space between cards */
+}
+
+.projects .col-md-6,
+.projects .col-lg-4 {
+  flex: 1;                 /* make all cards grow/shrink equally */
+  max-width: 100%;         /* override Bootstrap's max-width */
+}
+
